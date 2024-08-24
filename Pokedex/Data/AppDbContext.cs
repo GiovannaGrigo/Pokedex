@@ -25,6 +25,7 @@ public class AppDbContext: DbContext
             .HasKey(pt => new { pt.PokemonNumero, pt.TipoId });
 
         #endregion
+
     }
 
 }

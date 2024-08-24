@@ -20,11 +20,11 @@ public class Pokemon
     [ForeignKey("GeneroId")]
     public Genero Genero { get; set; }
 
-    [Required(ErrorMessage = "Informe o Nome.")]
-    [StringLength(30, ErrorMessage = "O nome deve possuir no máximo 30 caracteres.")]
+    [Required(ErrorMessage = "Informe o Nome")]
+    [StringLength(30, ErrorMessage = "O Nome deve possuir no máximo 30 caracteres")]
     public string Nome { get; set; }
 
-    [StringLength(1000, ErrorMessage = "A descrição deve possuir no máximo 1000 caracteres.")]
+    [StringLength(1000)]
     public string Descricao { get; set; }
 
     [Required]
@@ -42,4 +42,5 @@ public class Pokemon
     public string Animacao { get; set; }
 
     public ICollection<PokemonTipo> Tipos { get; set; }
+
 }
